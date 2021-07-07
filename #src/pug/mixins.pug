@@ -3,6 +3,9 @@ mixin head(title)
         title= title
         meta(charset='UTF-8')
         meta(name='format-detection' content='telephone=no')
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
         link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel='stylesheet' href='css/style.min.css')
         link(rel='shortcut icon' href='favicon.ico')
@@ -15,3 +18,9 @@ mixin title(title)
     section.sec-title-page
         .container
             .title-page= title
+
+mixin blog-element(img, title, p)
+    a.blog-body__element.blog-article(style=`background-image: url(' ${img} ');` href="#")
+        .blog-article__title= title
+        .blog-article__descreption= p
+        .blog-button.blog-article__btn Перейти

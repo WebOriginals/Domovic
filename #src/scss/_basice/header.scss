@@ -4,7 +4,6 @@
   left: 0;
   width: 100%;
   z-index: 10;
-  background-color: $color_5;
   @include maq('tablet') {
     background: $color_2;
   }

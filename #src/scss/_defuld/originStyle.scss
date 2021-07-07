@@ -4,7 +4,7 @@ $color_1: #FFFFFF;
 $color_2: #333;
 $color_3: #DF0303;
 $color_4: rgba(229, 57, 53, 0.3);
-$color_5: #90A4AE;
+$color_5: #F6F6F6;
 $color_6: #37474F;
 
 $link-img: '';
@@ -27,6 +27,7 @@ body {
   color: #222222;
   letter-spacing: 0.09em;
   line-height: 1.5;
+  background-color: $color_5;
 
   &._lock {
     overflow: hidden;
@@ -99,6 +100,7 @@ body {
   }
 }
 .button-in-basket{
+
   background: $color_3;
   color: $color_1;
   display: flex;
@@ -115,6 +117,21 @@ body {
   border-radius: 10px;
   svg{
     margin-right: 10px;
+  }
+}
+
+.blog-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  font-size: 18px;
+  border: 1px solid $color_1;
+  color: $color_1;
+  border-radius: 10px;
+  &:hover {
+    background: $color_3;
+    border: 1px solid $color_3;
   }
 }
 

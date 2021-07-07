@@ -3,7 +3,8 @@
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@700&display=swap&subset=cyrillic-ext');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@700&display=swap&subset=cyrillic-ext');
+
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
 @import "_defuld/fonts";
@@ -25,6 +26,7 @@ $fontFamily: 'Montserrat', sans-serif;
 
 @import "_defuld/originStyle";
 @import "_basice/forms";
+@import "_basice/ui";
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //component
@@ -41,4 +43,7 @@ $fontFamily: 'Montserrat', sans-serif;
 @import "_basice/animation-inputs";
 
 //main
+@import "main/first-screen";
+@import "main/blog";
+@import "main/brand";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

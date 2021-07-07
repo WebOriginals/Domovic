@@ -1,0 +1,27 @@
+.sec-brand{
+  padding: 25px 0;
+  @include mq('tablet') {
+    padding: 40px 0;
+  }
+}
+
+.brand-top{
+  display: flex;
+  justify-content: space-between;
+  @include adaptiv-margin-bottom(50,35);
+}
+
+.brand-body__slide{
+  display: grid;
+  align-items: center;
+  height: auto;
+
+  img{
+    max-width: 100%;
+  }
+}
+
+.brand-body_nav{
+  display: flex;
+  justify-content: center;
+}

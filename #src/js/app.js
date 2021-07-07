@@ -9,7 +9,10 @@ $( document ).ready(function() {
     // end component
 
     // sliders
-
+    @@include('files/sliders/MAIN_SLIDERS.js')
+    @@include('files/sliders/page-main-first-screen.js')
+    @@include('files/sliders/page-main-blog.js')
+    @@include('files/sliders/page-main-brand.js')
     // end sliders
 
 
