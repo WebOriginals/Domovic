@@ -1,0 +1,103 @@
+.wrapper-size {
+  position: relative;
+  align-self: center;
+}
+
+.wrapper-input{
+  padding-right: 18px;
+}
+
+.choice-of-size {
+  cursor: pointer;
+  width: fit-content;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 10px;
+  @include adaptiv-font(16, 14);
+
+  &:active,&:focus{
+    box-shadow: none;
+    outline: none;
+  }
+
+}
+
+.wrapper-input:before {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  width: 15px;
+  height: 13px;
+  margin-top: -3.5px;
+  @if ($link-img == '') {
+    background-image: url("./../../../img/ic/saidbar-arrow-d.svg");
+  } @else {
+    background-image: url($link-img + "/img/ic/saidbar-arrow-d.svg");
+  }
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+
+.transfotm .wrapper-input:before {
+  @if ($link-img == '') {
+    background-image: url("./../../../img/ic/saidbar-arrow-u.svg");
+  } @else {
+    background-image: url($link-img + "/img/ic/saidbar-arrow-u.svg");
+  }
+}
+
+.wrapper-list {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  padding: .8rem;
+  height: auto;
+  width: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  background: $color_1;
+
+  @include mq('tablet-wide') {
+    right: 0;
+  }
+
+}
+
+.list__itams {
+  cursor: pointer;
+  padding: .3rem;
+  @include adaptiv-font(16, 14);
+  color: $color_2;
+
+}
+
+.js_size_selector{
+  display: none;
+}
+
+.open{
+  display: block;
+}
+
+.inp-desc{
+  display: none;
+  @include mq('desktop') {
+    display: block;
+  }
+}
+
+.inp-mobl{
+  @include mq('desktop') {
+    display: none;
+  }
+}

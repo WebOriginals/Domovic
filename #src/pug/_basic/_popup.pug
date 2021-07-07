@@ -1,0 +1,79 @@
+.popup#brif
+    .popup__body
+        .popup__content.brif__content
+            a.popup__close.close-popup
+                img(src="img/icons/close.svg")
+            .popup__title Расскажите нам о вашем проекте
+            form.modal-form
+                .type-service
+                    .type-service__title.titleform Выберите тип услуги:
+                    .type-service__inputs
+                        .type-service__el
+                            input#type-service__input__1.type-service__input(type="checkbox"  name="simple-rating" value="1")
+                            label(for="type-service__input__1").type-service__label Разработка
+                        .type-service__el
+                            input#type-service__input__2.type-service__input(type="checkbox"  name="simple-rating" value="2")
+                            label(for="type-service__input__2").type-service__label Дизайн
+                        .type-service__el
+                            input#type-service__input__3.type-service__input(type="checkbox"  name="simple-rating" value="3")
+                            label(for="type-service__input__3").type-service__label Поддержка
+                        .type-service__el
+                            input#type-service__input__4.type-service__input(type="checkbox"  name="simple-rating" value="4")
+                            label(for="type-service__input__4").type-service__label Digital-маркетинг
+
+                .user-data
+                    .user-data__el
+                        span.input.input--hoshi
+                            input.input__field.input__field--hoshi(type="text")#input-1
+                            label.input__label.input__label--hoshi(for="input-1")
+                                span.input__label-content.input__label-content--hoshi Имя*
+                    .user-data__el
+                        span.input.input--hoshi
+                            input.input__field.input__field--hoshi(type="tel")#input-2
+                            label.input__label.input__label--hoshi(for="input-2")
+                                span.input__label-content.input__label-content--hoshi Телефон*
+                    .user-data__el
+                        span.input.input--hoshi
+                            input.input__field.input__field--hoshi(type="text")#input-3
+                            label.input__label.input__label--hoshi(for="input-3")
+                                span.input__label-content.input__label-content--hoshi E-mail*
+                    .user-data__el
+                        span.input.input--hoshi
+                            input.input__field.input__field--hoshi(type="text")#input-4
+                            label.input__label.input__label--hoshi(for="input-4")
+                                span.input__label-content.input__label-content--hoshi Сообщение
+
+                .budget
+                    .budget__title.titleform Ваш бюджет:
+                    .type-service__inputs
+                        .type-service__el
+                            input#budget__1.type-service__input(type="radio"  name="simple-rating" value="1")
+                            label(for="budget__1").type-service__label < 100 000 р
+                        .type-service__el
+                            input#budget__2.type-service__input(type="radio"  name="simple-rating" value="2")
+                            label(for="budget__2").type-service__label 100-300 т.р
+                        .type-service__el
+                            input#budget__3.type-service__input(type="radio"  name="simple-rating" value="3")
+                            label(for="budget__3").type-service__label 300-700 т.р
+                        .type-service__el
+                            input#budget__4.type-service__input(type="radio"  name="simple-rating" value="4")
+                            label(for="budget__4").type-service__label > 700 000 р
+                .modal-form__btn.button Отправить
+
+
+
+
+
+.popup.popup_massagename-message
+    .popup__content
+        .popup__body
+            .popup__close
+
+
+.popup.popup_video
+    .popup__content
+        .popup__body
+            .popup__close.popup__close_video
+            .popup__video._video
+
+

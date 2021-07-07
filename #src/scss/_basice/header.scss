@@ -1,0 +1,118 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: $color_5;
+  @include maq('tablet') {
+    background: $color_2;
+  }
+}
+
+.body-header{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 100px 30px ;
+  align-items: center;
+  height: 60px;
+
+  @include mq('tablet-990') {
+    grid-template-columns: 70px 1fr auto auto;
+    grid-gap: 15px;
+  }
+  @include mq('tablet-wide') {
+    grid-template-columns: 100px 1fr auto auto;
+  }
+  @include mq('desktop') {
+    grid-template-columns: 160px 1fr auto auto;
+    height: 140px;
+  }
+}
+.header__logo{
+  display: block;
+  width: 100%;
+  z-index: 3;
+  img{
+    max-width: 100%;
+  }
+}
+
+.header-phone__link{
+  color: $color_2;
+  font-weight: 500;
+}
+
+.header-mail__link{
+  color: $color_3;
+  text-decoration: underline;
+}
+
+.header-phone,.header-mail{
+  @include maq('tablet-990') {
+    display: none;
+  }
+}
+
+body._pc{
+  .header-phone__link{
+    &:hover{
+      color: $color_3;
+    }
+  }
+  .header-mail__link{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+.stickytop {
+  .body-header{
+    height: 60px;
+  }
+}
+
+.menu-mobile{
+  display: grid;
+  grid-gap: 15px 5px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+
+  @include mq('tablet-990') {
+    display: none;
+  }
+
+  .header-phone,.header-mail{
+    display: block;
+    @include mq('tablet-990') {
+      display: none;
+    }
+  }
+
+  .menu-mobile__text-gray{
+    color: $color_5;
+    font-weight: 500;
+    &.up{
+      text-transform: uppercase;
+    }
+  }
+
+  .download-presentation{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    grid-column: span 2;
+    height: 25px;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    @if ($link-img == '') {
+      background-image: url("./../../img/icons/pdf.svg");
+    } @else {
+      background-image: url($link-img + "/img/icons/pdf.svg");
+    }
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+}

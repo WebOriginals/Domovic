@@ -1,0 +1,31 @@
+.dropDownList-title{
+  padding-bottom: 10px;
+  cursor: pointer;
+  padding-right: 25px;
+  background-position: right 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  @include mq('tablet') {
+    width: fit-content;
+  }
+
+  @if ($link-img == '') {
+    background-image: url("./../../../img/ic/saidbar-arrow-d.svg");
+  } @else {
+    background-image: url($link-img + "/img/ic/saidbar-arrow-d.svg");
+  }
+
+  &.open{
+    @if ($link-img == '') {
+      background-image: url("./../../../img/ic/saidbar-arrow-u.svg");
+    } @else {
+      background-image: url($link-img + "/img/ic/saidbar-arrow-u.svg");
+    }
+  }
+}
+
+.dropDownList-hidden{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}

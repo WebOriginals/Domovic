@@ -1,0 +1,33 @@
+._loading-icon {
+  background: url("../img/loading.gif") center / 50px no-repeat;
+  height: 50px;
+}
+
+
+.page__image {
+  position: relative;
+  padding: 0px 0px 90% 0px;
+  background: url("../img/loading.gif") center / 50px no-repeat;
+}
+.page__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+
+.page__map {
+  padding: 0px 0px 50% 0px;
+  position: relative;
+  background: url("../img/loading.gif") center / 50px no-repeat;
+}
+.page__map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

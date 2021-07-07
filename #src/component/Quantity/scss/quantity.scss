@@ -1,0 +1,30 @@
+.card-info__quantity{
+
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.card-info__minus{
+  padding: 5px 0;
+}
+
+.card-info__minus,
+.card-info__plus{
+  align-self: center;
+  height: auto;
+  cursor: pointer;
+  img{
+    display: block;
+  }
+}
+
+.card-info__number{
+  width: 25px;
+  margin: 0 5px;
+  text-align: center;
+  @include mq('desktop-wide') {
+    font-size: 18px;
+  }
+}

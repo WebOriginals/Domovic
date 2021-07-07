@@ -1,0 +1,64 @@
+.popup__title{
+  @include adaptiv-font(36,26);
+  font-weight: bold;
+  @include adaptiv-margin-bottom(40,30);
+}
+
+.type-service{
+  @include adaptiv-margin-bottom(40,30);
+}
+
+.titleform{
+  @include adaptiv-font(20,18);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.type-service__inputs{
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  @include mq('tablet') {
+    grid-template-columns: max-content max-content max-content max-content;
+  }
+}
+
+.type-service__el{
+
+  .type-service__input{
+    display: none;
+  }
+
+  .type-service__label{
+    cursor: pointer;
+    &:hover{
+      color: $color_3;
+    }
+  }
+  .type-service__input:checked + .type-service__label{
+    color: $color_3;
+  }
+
+}
+
+.budget{
+  @include adaptiv-margin-bottom(40,30);
+}
+
+.user-data{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  @include mq('tablet') {
+    grid-gap: 20px 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include adaptiv-margin-bottom(40,30);
+}
+
+.brif__content{
+  @include mq('desktop') {
+    width: 1100px;
+    max-width: 1100px;
+  }
+}

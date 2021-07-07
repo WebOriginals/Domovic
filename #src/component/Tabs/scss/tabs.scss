@@ -1,0 +1,16 @@
+.tabs-nav{
+  display: flex;
+
+  &__item{
+    cursor: pointer;
+    margin-right: 30px;
+    align-self: center;
+  }
+}
+
+.tab-pane{
+  display: none;
+  &.is-active{
+    display: block;
+  }
+}
