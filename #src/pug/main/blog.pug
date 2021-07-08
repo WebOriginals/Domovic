@@ -1,15 +1,19 @@
 include ./../../pug/mixins
 section.sec-blog.blog
     ._container
-        .title.blog__title Наш блог
         .blog-body
-            +blog-element('img/blog1.png', 'Открылся сайт компании "Домовик1"')
-            +blog-element('img/blog3.png', 'Как выбрать надежную кухонную вытяжку"', 'Вопрос о том, как выбрать кухонную вытяжку, интересует всех.')
-            +blog-element('img/blog4.png', 'Открылся сайт компании "Домовик1"')
-            +blog-element('img/blog2.png', 'Режимы работы вытяжки"')
-        .blog-body__nav
-            .blog-body-btn-l
-                img(src='img/icons/arrow-l.svg' alt='стрелка на лево')
-            .blog-body-btn-n
-                img(src='img/icons/arrow-r.svg' alt='стрелка на право')
+            .blog-top
+                .title.blog__title Наш блог
+                .blog-body__nav(data-da=".blog-body,767,last")
+                    .blog-body-btn-l
+                        img(src='img/icons/arrow-l.svg' alt='стрелка на лево')
+                    .blog-body-btn-n
+                        img(src='img/icons/arrow-r.svg' alt='стрелка на право')
+
+            .blog-body-slidr
+                +blog-element('img/blog1.png', 'Открылся сайт компании "Домовик1"')
+                +blog-element('img/blog3.png', 'Как выбрать надежную кухонную вытяжку"', 'Вопрос о том, как выбрать кухонную вытяжку, интересует всех.')
+                +blog-element('img/blog4.png', 'Открылся сайт компании "Домовик1"')
+                +blog-element('img/blog2.png', 'Режимы работы вытяжки"')
+
 

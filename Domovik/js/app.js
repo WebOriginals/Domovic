@@ -34,9 +34,9 @@ if (animItems.length > 0) {
         animOnScroll();
     }, 300);
 }
-$( document ).ready(function() {
-    //component
-    if( $( '.popup' ).length > 0) {
+
+//component
+if( $( '.popup' ).length > 0) {
     const popupLinks = document.querySelectorAll('.popup-link');
     const body = document.querySelector('body');
     const lockPadding = document.querySelectorAll(".lock-padding");
@@ -161,7 +161,7 @@ $( document ).ready(function() {
         }
     })();
 }
-    // Dynamic Adapt v.1
+// Dynamic Adapt v.1
 // HTML data-da="where(uniq class name),when(breakpoint),position(digi)"
 // e.x. data-da=".item,992,2"
 // Andrikanych Yevhen 2020
@@ -325,7 +325,7 @@ if( $( '[data-da]' ).length > 0) {
     da.init();
 
 }
-    "use strict"
+"use strict"
 
 const lazyImages = document.querySelectorAll('img[data-src],source[data-srcset]');
 const loadMapBlock = document.querySelector('._load-map');
@@ -389,7 +389,7 @@ async function getContent() {
         alert("Ошибка");
     }
 }
-    let tab = function () {
+let tab = function () {
     let AllBodyTabs = document.querySelectorAll('.tabs');
 
     AllBodyTabs.forEach(tab=> {
@@ -422,11 +422,11 @@ async function getContent() {
 tab();
 
 
-    // end component
+// end component
 
-    // sliders
-    if(window.screen.width < 767) {
-    let blog = document.querySelector('.blog-body');
+// sliders
+if(window.screen.width < 1199) {
+    let blog = document.querySelector('.blog-body-slidr');
     blog.classList.add('_swiper');
 }
 //BildSlider
@@ -494,7 +494,7 @@ function sliders_bild_callback(params) { }
 
 
 
-    let firstScreen = new Swiper('.first-screen-slider', {
+let firstScreen = new Swiper('.first-screen-slider', {
     /*
     effect: 'fade',
     autoplay: {
@@ -573,8 +573,8 @@ function sliders_bild_callback(params) { }
 
 
 
-    if(window.screen.width < 767) {
-    let blog_sl = new Swiper('.blog-body', {
+if(window.screen.width < 1199) {
+    let blog_sl = new Swiper('.blog-body-slidr', {
         observer: true,
         observeParents: true,
         slidesPerView: 1,
@@ -593,12 +593,16 @@ function sliders_bild_callback(params) { }
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
+            1022: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
         },
     });
 }
 
 
-    let brand = new Swiper('.brand-body__sleder', {
+let brand = new Swiper('.brand-body__sleder', {
     observer: true,
     observeParents: true,
     slidesPerView: 1,
@@ -614,11 +618,11 @@ function sliders_bild_callback(params) { }
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
         },
-        992: {
-            slidesPerView: 3,
+        1022: {
+            slidesPerView: 4,
             spaceBetween: 20,
         },
         1268: {
@@ -636,10 +640,59 @@ function sliders_bild_callback(params) { }
 
 
 
-    // end sliders
+let loffset = function loffset() {
+    let WidthWindow = window.screen.width;
+    let WidthContainer = document.querySelector('._container');
+    WidthContainer = WidthContainer.offsetWidth;
+    let coordinatesBeginning = 0;
+    return coordinatesBeginning = (WidthWindow - WidthContainer) / 2;
+};
+let goods = new Swiper('.goods-main-slider', {
+    init: false,
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    slidesOffsetBefore: loffset(),
+    speed: 800,
+    lazy: true,
+    navigation: {
+        nextEl: '.goods-main-btn-n',
+        prevEl: '.goods-main-btn-l',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1268: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1355: {
+            slidesPerView: 3.2,
+            spaceBetween: 30,
+        },
+        1919: {
+            slidesPerView: 4.2,
+            spaceBetween: 30,
+        },
+        2500: {
+            slidesPerView: 7,
+            spaceBetween: 30,
+        },
+
+    },
+});
+goods.init();
+// end sliders
 
 
-    "use strict"
+"use strict"
 
 const isMobile = {
     Android: function () {
@@ -791,7 +844,7 @@ if(!isMobile.any()) {
         heightMenuThirdLevel.style.height = heightMenuSecondLevel + 'px';
     }
 }
-    const header = document.querySelector('.header');
+const header = document.querySelector('.header');
 
 window.onscroll = function () {
     if (window.pageYOffset > 200) {
@@ -800,7 +853,7 @@ window.onscroll = function () {
         header.classList.remove('stickytop');
     }
 };
-    /*!
+/*!
  * classie - class helper functions
  * from bonzo https://github.com/ded/bonzo
  *
@@ -917,5 +970,44 @@ window.onscroll = function () {
         }
     }
 })();
+if (window.screen.width <= 480) {
+    const servicesElement = document.querySelectorAll('.catalog-body__row');
+    const showBtnServicesElement = document.querySelector('.catalog-body__btn');
+    for (let i = 0; i < servicesElement.length; i++) {
+        if (i > 0) {
+            servicesElement[i].classList.add('hide');
+        }
+    }
 
-})
+    showBtnServicesElement.addEventListener('click', () => {
+        for (let i = 0; i < servicesElement.length; i++) {
+            servicesElement[i].classList.remove('hide')
+        }
+        showBtnServicesElement.remove()
+    })
+}
+let slides = document.querySelectorAll('.goods-main-slide');
+let buttons = document.querySelectorAll('.goods-filter-btn');
+let filter = document.querySelector('.goods-main__filter');
+
+filter.addEventListener('click', function (event) {
+    let target = event.target;
+    let dataElement = target.dataset.name;
+    console.log(dataElement)
+    if(target.classList.contains('goods-filter-btn')) {
+        for(let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove('active');
+        }
+        target.classList.add('active');
+    }
+    for(let slide of slides){
+        if(slide.dataset.category !== dataElement && dataElement !== 'all'){
+            slide.classList.add('hide')
+        }else{
+            slide.classList.remove('hide')
+        }
+    }
+});
+
+
+

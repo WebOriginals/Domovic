@@ -3,9 +3,10 @@
 $color_1: #FFFFFF;
 $color_2: #333;
 $color_3: #DF0303;
-$color_4: rgba(229, 57, 53, 0.3);
+$color_4: #FF6C6C;
 $color_5: #F6F6F6;
-$color_6: #37474F;
+$color_6: #8D8D8D;
+
 
 $link-img: '';
 
@@ -100,7 +101,6 @@ body {
   }
 }
 .button-in-basket{
-
   background: $color_3;
   color: $color_1;
   display: flex;
@@ -110,7 +110,7 @@ body {
   cursor: pointer;
   transition: .5s;
   padding: 0 15px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   border: 1px solid $color_3;
   width: fit-content;
@@ -134,6 +134,23 @@ body {
     border: 1px solid $color_3;
   }
 }
+.about-us__button{
+  width: 290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68px;
+  font-size: 18px;
+  border: 1px solid $color_3;
+  color: $color_2;
+  border-radius: 10px;
+  &:hover {
+    background: $color_3;
+    border: 1px solid $color_3;
+    color: $color_1;
+  }
+ }
+
 
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 @import "null";

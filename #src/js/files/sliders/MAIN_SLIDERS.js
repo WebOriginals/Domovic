@@ -1,5 +1,5 @@
-if(window.screen.width < 767) {
-    let blog = document.querySelector('.blog-body');
+if(window.screen.width < 1199) {
+    let blog = document.querySelector('.blog-body-slidr');
     blog.classList.add('_swiper');
 }
 //BildSlider

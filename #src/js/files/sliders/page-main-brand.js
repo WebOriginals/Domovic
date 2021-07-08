@@ -14,11 +14,11 @@ let brand = new Swiper('.brand-body__sleder', {
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
         },
-        992: {
-            slidesPerView: 3,
+        1022: {
+            slidesPerView: 4,
             spaceBetween: 20,
         },
         1268: {

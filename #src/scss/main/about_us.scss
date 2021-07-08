@@ -1,0 +1,85 @@
+.sec-about-us {
+  padding: 25px 0;
+  @include mq('tablet') {
+    padding: 40px 0;
+  }
+}
+
+.about-us-body {
+  position: relative;
+  display: grid;
+  grid-gap: 30px;
+  @include mq('tablet') {
+    grid-template-columns: 370px 1fr;
+    grid-template-rows: 1fr 140px;
+  }
+
+  .about-us__img {
+    grid-row: span 2;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+
+.about-us__description {
+  @include mq('desktop') {
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+
+  p {
+    @include adaptiv-font(22, 20);
+    margin-bottom: 23px;
+  }
+
+  span {
+    color: $color_6;
+    font-size: 16px;
+  }
+}
+
+.about-us__qualities {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  @include mq('desktop') {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .about-us-qualities__number {
+    @include adaptiv-font(70, 50);
+    color: $color_3;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+}
+
+.about-us__btn {
+  margin-top: 30px;
+  @include maq('tablet') {
+    width: 100%;
+  }
+
+}
+
+.about-us__map {
+  width: 100%;
+  padding-top: 60%;
+  @include mq('desktop') {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    width: 470px;
+    height: 280px;
+    padding-top: 0;
+  }
+}

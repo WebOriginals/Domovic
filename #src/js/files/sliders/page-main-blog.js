@@ -1,5 +1,5 @@
-if(window.screen.width < 767) {
-    let blog_sl = new Swiper('.blog-body', {
+if(window.screen.width < 1199) {
+    let blog_sl = new Swiper('.blog-body-slidr', {
         observer: true,
         observeParents: true,
         slidesPerView: 1,
@@ -16,6 +16,10 @@ if(window.screen.width < 767) {
             },
             480: {
                 slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1022: {
+                slidesPerView: 3,
                 spaceBetween: 20,
             },
         },
