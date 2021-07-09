@@ -11,21 +11,32 @@
 
 .body-header{
   display: grid;
-  justify-content: space-between;
-  grid-template-columns: 100px 30px ;
+  //justify-content: space-between;
+  grid-template-columns: 1fr auto auto auto ;
   align-items: center;
   height: 60px;
-
+  @include maq('tablet-wide') {
+    width: 100%;
+    justify-content: flex-end;
+    grid-gap: 30px;
+    .header__logo{
+      margin-right: auto;
+      img{
+        width: 120px;
+      }
+    }
+  }
   @include mq('tablet-990') {
-    grid-template-columns: 70px 1fr auto auto;
+    grid-template-columns: 70px auto auto 30px 25px;
     grid-gap: 15px;
   }
   @include mq('tablet-wide') {
-    grid-template-columns: 100px 1fr auto auto;
+    grid-template-columns: 100px auto auto 30px 25px;
   }
   @include mq('desktop') {
-    grid-template-columns: 160px 1fr auto auto;
+    grid-template-columns: 160px auto auto 30px 25px;
     height: 140px;
+    grid-gap: 15px;
   }
 }
 .header__logo{
@@ -38,80 +49,85 @@
 }
 
 .header-phone__link{
-  color: $color_2;
-  font-weight: 500;
+  color: $color_1;
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  .header-phone-num{
+    @include maq('tablet-wide') {
+      display: none;
+    }
+  }
+  .header-phone-svg{
+    z-index: 10;
+    @include maq('tablet-wide') {
+      margin-right: 0 !important;
+    }
+  }
+  svg{
+    margin-right: 10px;
+  }
 }
+.header-basket__link{
+  position: relative;
+  display: block;
+  z-index: 10;
 
-.header-mail__link{
-  color: $color_3;
-  text-decoration: underline;
+  .header-basket__number{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    background: $color_3;
+    border-radius: 50%;
+    color: $color_1;
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+      transform: translateX(1px);
+    }
+  }
 }
-
-.header-phone,.header-mail{
-  @include maq('tablet-990') {
+.header__lk{
+  @include maq('tablet-wide') {
     display: none;
   }
 }
-
 body._pc{
   .header-phone__link{
     &:hover{
       color: $color_3;
     }
   }
-  .header-mail__link{
-    &:hover{
-      text-decoration: none;
-    }
-  }
+
 }
 
 .stickytop {
+  background: $color_2;
   .body-header{
-    height: 60px;
+    height: 45px;
   }
 }
 
 .menu-mobile{
   display: grid;
-  grid-gap: 15px 5px;
-  grid-template-columns: 1fr 1fr;
+  grid-gap:  35px;
+  grid-template-columns: 1fr;
   margin-top: 50px;
+  .menu-mobile__wrapper{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 30px 25px;
+    align-items: center;
+  }
 
   @include mq('tablet-990') {
     display: none;
   }
 
-  .header-phone,.header-mail{
-    display: block;
-    @include mq('tablet-990') {
-      display: none;
-    }
-  }
 
-  .menu-mobile__text-gray{
-    color: $color_5;
-    font-weight: 500;
-    &.up{
-      text-transform: uppercase;
-    }
-  }
-
-  .download-presentation{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    grid-column: span 2;
-    height: 25px;
-    padding-left: 30px;
-    font-size: 16px;
-    font-weight: 500;
-    @if ($link-img == '') {
-      background-image: url("./../../img/icons/pdf.svg");
-    } @else {
-      background-image: url($link-img + "/img/icons/pdf.svg");
-    }
-    background-repeat: no-repeat;
-    background-position: top left;
-  }
 }

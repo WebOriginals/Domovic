@@ -1,7 +1,7 @@
 .sec-blog{
-  padding: 25px 0;
+  padding: 25px 0 50px;
   @include mq('tablet') {
-    padding: 40px 0;
+    padding: 40px 0 80px;
   }
 }
 .blog-top{
