@@ -1,4 +1,10 @@
 .sec-catalog {
+  padding: 25px 0 ;
+  @include mq('tablet') {
+    padding: 40px 0;
+  }
+}
+.catalog_padding-page-main{
   padding: 50px 0 25px;
   @include mq('tablet') {
     padding: 80px 0 40px;
