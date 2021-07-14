@@ -97,12 +97,12 @@ function css() {
 				cascade: true
 			})
 		)
-		.pipe(webpcss(
-			{
-				webpClass: "._webp",
-				noWebpClass: "._no-webp"
-			}
-		))
+		// .pipe(webpcss(
+		// 	{
+		// 		webpClass: "._webp",
+		// 		noWebpClass: "._no-webp"
+		// 	}
+		// ))
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
 		.pipe(
@@ -118,8 +118,8 @@ function js() {
 		.pipe(plumber())
 		.pipe(fileinclude())
 		.pipe(gulp.dest(path.build.js))
-		.pipe(uglify(/* options */))
-		.on('error', function (err) { console.log(err.toString()); this.emit('end'); })
+		// .pipe(uglify(/* options */))
+		// .on('error', function (err) { console.log(err.toString()); this.emit('end'); })
 		.pipe(
 			rename({
 				suffix: ".min",

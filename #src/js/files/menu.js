@@ -1,30 +1,30 @@
-"use strict"
 
-const isMobile = {
-    Android: function () {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function () {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function () {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function () {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function () {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function () {
-        return (
-            isMobile.Android() ||
-            isMobile.BlackBerry() ||
-            isMobile.iOS() ||
-            isMobile.Opera() ||
-            isMobile.Windows());
-    }
-};
+
+// const isMobile = {
+//     Android: function () {
+//         return navigator.userAgent.match(/Android/i);
+//     },
+//     BlackBerry: function () {
+//         return navigator.userAgent.match(/BlackBerry/i);
+//     },
+//     iOS: function () {
+//         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+//     },
+//     Opera: function () {
+//         return navigator.userAgent.match(/Opera Mini/i);
+//     },
+//     Windows: function () {
+//         return navigator.userAgent.match(/IEMobile/i);
+//     },
+//     any: function () {
+//         return (
+//             isMobile.Android() ||
+//             isMobile.BlackBerry() ||
+//             isMobile.iOS() ||
+//             isMobile.Opera() ||
+//             isMobile.Windows());
+//     }
+// };
 
 if (isMobile.any()) {
     document.body.classList.add('_touch');
@@ -128,8 +128,12 @@ if (menuLinks.length > 0) {
 
 //Бурет svg , заголовок с 2 уровня и подставляет в заголовок 3 уровня
 const menuSecondLevel = document.querySelector('.menuSecondLevel');
-const listElements = menuSecondLevel.querySelectorAll('.menuSecondLevel__li');
 
+const listElements = menuSecondLevel.querySelectorAll('.menuSecondLevel__li');
+const asideListElements = document.querySelectorAll('.wrapper-catalog .menuSecondLevel__li');
+const closeThirdLevel = document.querySelectorAll('.ThirdLevel-title');
+const bodyThirdLevel = document.querySelectorAll('.as');
+console.log(asideListElements);
 
 for (let listElement of listElements) {
     listElement.addEventListener('mouseenter', e => {
@@ -142,6 +146,18 @@ for (let listElement of listElements) {
     });
 }
 
+for (let listElement of asideListElements) {
+    listElement.addEventListener('mouseenter', e => {
+        const headerThirdLevel = listElement.querySelector('.menuThirdLevel  .menu__sub-list-title');
+        const title = listElement.querySelector('span').cloneNode(true);
+        const svg = listElement.querySelector('svg').cloneNode(true);
+        headerThirdLevel.innerHTML= '';
+        headerThirdLevel.append(svg);
+        headerThirdLevel.append(title);
+    });
+}
+
+
 //расчет высоты элемета
 if(!isMobile.any()) {
     const heightMenuSecondLevel = document.querySelector('.menu__sub-list').offsetHeight;
@@ -150,3 +166,9 @@ if(!isMobile.any()) {
         heightMenuThirdLevel.style.height = heightMenuSecondLevel + 'px';
     }
 }
+// в мобильной версии в сайд баре скрываю 2 уровень каталога
+for( let el of closeThirdLevel)
+    el.addEventListener('click', () => {
+        let perent = el.parentNode.parentNode.parentNode;
+        perent.classList.remove('_active')
+})

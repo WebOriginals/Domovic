@@ -1,3 +1,14 @@
+.other-pages{
+
+  .header{
+    @if ($link-img == '') {
+      background-image: url("./../../../img/header.png");
+    } @else {
+      background-image: url($link-img + "/img/header.png");
+    }
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -8,6 +19,7 @@
     background: $color_2;
   }
 }
+
 
 .body-header{
   display: grid;
@@ -35,7 +47,7 @@
   }
   @include mq('desktop') {
     grid-template-columns: 160px auto auto 30px 25px;
-    height: 140px;
+    height: 120px;
     grid-gap: 15px;
   }
 }

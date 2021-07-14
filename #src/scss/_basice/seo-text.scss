@@ -1,0 +1,22 @@
+.seo-text{
+  padding: 25px 0;
+  @include mq('tablet-wide') {
+    padding: 40px 0;
+  }
+}
+.seo-text-body{
+  h2{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  p{
+    color: $color_6;
+    margin-bottom: 20px;
+  }
+}

@@ -1,6 +1,10 @@
-@@include('files/animationAll.js')
+
+@@include('files/functions.js')
 
 //component
+@@include('../component/noUiSlider/js/nouislider.js')
+@@include('../component/noUiSlider/js/wNumb.min.js')
+
 @@include('../component/Modals/js/modal.js')
 @@include('../component/dinamicAdaptiv/js/dinamicAdaptiv.js')
 @@include('../component/lazyLoad/js/lazyLoad.js')
@@ -22,5 +26,6 @@
 @@include('files/animation-inputs.js')
 @@include('files/add-card-catalog.js')
 @@include('files/page-main-goods-filter.js')
+@@include('files/form.js')
 
 

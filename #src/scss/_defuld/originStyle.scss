@@ -6,6 +6,7 @@ $color_3: #DF0303;
 $color_4: #FF6C6C;
 $color_5: #F6F6F6;
 $color_6: #8D8D8D;
+$color_7: #eaeaea;
 
 
 $link-img: '';
@@ -158,9 +159,11 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
   flex: 1 1 auto;
-  padding-top: 60px;
+  padding-top: 55px;
+  padding-bottom: 25px;
   @include mq('desktop') {
-    padding-top: 140px;
+    padding-top: 120px;
+    padding-bottom: 40px;
   }
 
   &.main {

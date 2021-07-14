@@ -6,4 +6,5 @@ if( $( '.dropDownList-title' ).length > 0) {
         $(hidden).slideToggle(parameters);
         $(elem).toggleClass("open");
     });
+
 }

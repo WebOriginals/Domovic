@@ -158,7 +158,7 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text:before {
-			background: #fff url("../../img/icons/check.svg") center no-repeat;
+			background: #fff url("../../img/icons/check-box.svg") center no-repeat;
 		}
 	}
 	// .checkbox__text
@@ -167,7 +167,7 @@ textarea.input {
 		align-items: center;
 		position: relative;
 		font-size: 16px;
-		color: #ffffff;
+		color: $color_2;
 		letter-spacing: -0.3px;
 		line-height: calc(20 / 16);
 		cursor: pointer;
@@ -181,7 +181,8 @@ textarea.input {
 			width: 20px;
 			height: 18px;
 			background: #fff;
-			border: 1px solid #a7a9ac;
+			border: 1px solid $color_7;
+			border-radius: 5px;
 		}
 	}
 	a {

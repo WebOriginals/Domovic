@@ -1,0 +1,23 @@
+.bread-crumbs{
+  padding: 50px 0 10px;
+  @include mq('tablet') {
+    padding: 80px 0 10px;
+  }
+  a{
+    color: $color_2;
+  }
+}
+
+.bread-crumbs__list{
+  display: flex;
+}
+
+.headline{
+  padding: 10px 0 10px;
+}
+
+.headline__title{
+  font-size: 50px;
+  font-weight: 700;
+  font-family: Oswald, sans-serif;
+}

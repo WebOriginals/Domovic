@@ -10,16 +10,16 @@
   }
 
   @if ($link-img == '') {
-    background-image: url("./../../../img/ic/saidbar-arrow-d.svg");
+    background-image: url("./../../../img/icons/ar.svg");
   } @else {
-    background-image: url($link-img + "/img/ic/saidbar-arrow-d.svg");
+    background-image: url($link-img + "/img/icons/ar.svg");
   }
 
   &.open{
     @if ($link-img == '') {
-      background-image: url("./../../../img/ic/saidbar-arrow-u.svg");
+      background-image: url("./../../../img/icons/ar-d.svg");
     } @else {
-      background-image: url($link-img + "/img/ic/saidbar-arrow-u.svg");
+      background-image: url($link-img + "/img/icons/ar-d.svg");
     }
   }
 }

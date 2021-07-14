@@ -26,7 +26,9 @@ $fontFamily: 'Montserrat', sans-serif;
 
 @import "_defuld/originStyle";
 @import "_basice/forms";
+@import "_basice/bread-crumbs-headline";
 @import "_basice/ui";
+@import "_defuld/nouislider";
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //component
@@ -41,6 +43,7 @@ $fontFamily: 'Montserrat', sans-serif;
 @import "_basice/footer";
 @import "_basice/menu/menu";
 @import "_basice/animation-inputs";
+@import "_basice/seo-text";
 
 //main
 @import "main/first-screen";
@@ -51,6 +54,8 @@ $fontFamily: 'Montserrat', sans-serif;
 @import "main/brand";
 
 //catalog
-@import "catalog/catalog";
-@import "catalog/about_us";
+@import "catalog/catalog-section-page";
+@import "catalog/aside";
+@import "catalog/goods";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

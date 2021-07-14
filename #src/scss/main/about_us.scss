@@ -1,7 +1,7 @@
 .sec-about-us {
   padding: 25px 0;
   @include mq('tablet') {
-    padding: 40px 0;
+    padding: 80px 0;
   }
 }
 
@@ -11,7 +11,7 @@
   grid-gap: 30px;
   @include mq('tablet') {
     grid-template-columns: 370px 1fr;
-    grid-template-rows: 1fr 140px;
+    grid-template-rows: 1fr auto;
   }
 
   .about-us__img {
