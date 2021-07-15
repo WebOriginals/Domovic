@@ -1284,11 +1284,11 @@ body.ie ._ibg img {
   background-position: right 10px;
   background-repeat: no-repeat;
   width: 100%;
-  background-image: url("./../../../img/icons/ar.svg");
+  background-image: url("assets/img/icons/ar.svg");
 }
 
 .dropDownList-title.open {
-  background-image: url("./../../../img/icons/ar-d.svg");
+  background-image: url("assets/img/icons/ar-d.svg");
 }
 
 .dropDownList-hidden {
@@ -1501,7 +1501,7 @@ body.lock {
 }
 
 .other-pages .header {
-  background-image: url("./../../../img/header.png");
+  background-image: url("assets/img/header.png");
 }
 
 .header {
@@ -1646,7 +1646,7 @@ body._pc .header-phone__link:hover {
 
 .body-header-bottom__red {
   padding: 0 20px 0 80px;
-  background-image: url("./../../../img/icons/collaboration.svg");
+  background-image: url("assets/img/icons/collaboration.svg");
   background-position: left 15px center;
   background-repeat: no-repeat;
   background-color: #DF0303;
@@ -1671,7 +1671,7 @@ body._pc .header-phone__link:hover {
 .body-header-bottom__white {
   cursor: pointer;
   padding: 0 20px 0 60px;
-  background-image: url("./../../../img/icons/user.svg");
+  background-image: url("assets/img/icons/user.svg");
   background-position: left 15px center;
   background-repeat: no-repeat;
   background-color: #FFFFFF;
@@ -2263,7 +2263,7 @@ body._touch .ThirdLevel-title:after {
   padding-left: 20px;
   background-position: left center;
   background-repeat: no-repeat;
-  background-image: url("./../../img/icons/Ellipse.svg");
+  background-image: url("assets/img/icons/Ellipse.svg");
 }
 
 .first-screen-slider__slide-content .first-screen__btn {
@@ -2382,7 +2382,7 @@ body._touch .ThirdLevel-title:after {
   -webkit-transition: .8s;
   -o-transition: .8s;
   transition: .8s;
-  background-image: url("./../../../img/icons/cat-btn.svg");
+  background-image: url("assets/img/icons/cat-btn.svg");
 }
 
 .catalog-card__img {
@@ -2761,13 +2761,13 @@ body._touch .ThirdLevel-title:after {
   font-size: 22px;
   font-weight: 700;
   padding-right: 20px;
-  background-image: url("./../../../img/icons/ar-d.svg");
+  background-image: url("assets/img/icons/ar-d.svg");
   background-position: center right;
   background-repeat: no-repeat;
 }
 
 .droplist-aside__title._active {
-  background-image: url("./../../../img/icons/ar.svg");
+  background-image: url("assets/img/icons/ar.svg");
 }
 
 .droplist-aside-body {
@@ -2939,7 +2939,7 @@ body._touch .ThirdLevel-title:after {
   width: fit-content;
   display: inline-block;
   padding-right: 30px;
-  background-image: url("./../../../img/icons/exit.svg");
+  background-image: url("assets/img/icons/exit.svg");
   background-repeat: no-repeat;
   background-position: center right 10px;
 }
