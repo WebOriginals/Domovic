@@ -1,0 +1,19 @@
+include pug/mixins
+doctype html
+html(lang="ru")
+    +head('Каталог')
+
+    body
+        //на всех кроме главной надо добавить класс .other-pages для .wrapper , тк шапка другая
+        .wrapper.other-pages
+            include pug/_basic/_header-lk-1
+            .page.page-lk
+                include pug/bread-crumbs
+                +headline('Каталог')
+                include pug/catalog/catalog
+                include pug/main/about_us
+
+            include pug/_basic/_footer
+
+        include pug/_basic/_popup
+        include pug/_basic/_js
