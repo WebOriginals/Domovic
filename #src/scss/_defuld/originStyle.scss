@@ -9,7 +9,7 @@ $color_6: #8D8D8D;
 $color_7: #eaeaea;
 
 
-$link-img: 'assets';
+$link-img: '../';
 //$link-img: '';
 
 
@@ -171,7 +171,7 @@ body {
     padding-top: 0 !important;
   }
   &.page-lk{
-    padding-top: 240px;
+    padding-top: 170px;
 
     @include mq('desktop') {
       padding-top: 270px;

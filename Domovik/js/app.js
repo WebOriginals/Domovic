@@ -4044,7 +4044,7 @@ if (isMobile.any()) {
     let liSecondLevel = document.querySelectorAll('.menuSecondLevel__li');
     let liOneLevel = document.querySelectorAll('.menu__list > li');
     let logo = document.querySelector('.header__logo');
-    let backArrow = document.querySelector('.back-arrow');
+    //let backArrow = document.querySelector('.back-arrow');
 
     if (menuArrows.length > 0) {
         for (let index = 0; index < menuArrows.length; index++) {
@@ -4052,29 +4052,29 @@ if (isMobile.any()) {
             menuArrow.addEventListener("click", function (e) {
 
                 menuArrow.parentElement.classList.toggle('_active');
-                logo.style.display = 'none';
-                backArrow.style.display = 'block';
+                //logo.style.display = 'none';
+                //backArrow.style.display = 'block';
 
             });
         }
 
-        for (let el of liOneLevel) {
-            backArrow.addEventListener("click", function (e) {
-
-                for(let liSecondLevelEl of liSecondLevel){
-
-                    if(liSecondLevelEl.classList.contains('_active')){
-
-                        liSecondLevelEl.classList.remove('_active');
-
-                    } else {
-
-                        el.classList.remove('_active');
-
-                    }
-                }
-            })
-        }
+        // for (let el of liOneLevel) {
+        //     backArrow.addEventListener("click", function (e) {
+        //
+        //         for(let liSecondLevelEl of liSecondLevel){
+        //
+        //             if(liSecondLevelEl.classList.contains('_active')){
+        //
+        //                 liSecondLevelEl.classList.remove('_active');
+        //
+        //             } else {
+        //
+        //                 el.classList.remove('_active');
+        //
+        //             }
+        //         }
+        //     })
+        // }
     }
 
     //открытие 3 уровня

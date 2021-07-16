@@ -6,6 +6,9 @@
     } @else {
       background-image: url($link-img + "/img/header.png");
     }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
