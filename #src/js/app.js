@@ -18,6 +18,7 @@
 @@include('files/sliders/page-main-blog.js')
 @@include('files/sliders/page-main-brand.js')
 @@include('files/sliders/page-main-goods.js')
+@@include('files/sliders/page-card-goods.js')
 // end sliders
 
 

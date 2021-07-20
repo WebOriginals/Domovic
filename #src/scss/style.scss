@@ -60,4 +60,8 @@ $fontFamily: 'Montserrat', sans-serif;
 @import "catalog/aside";
 @import "catalog/goods";
 
+//card-goods
+@import "card-good/card-top";
+@import "card-good/card-bottom";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

@@ -1,0 +1,110 @@
+.card-tabs{
+  padding: 25px 0;
+  @include mq('tablet-wide') {
+    padding: 25px 0 40px;
+  }
+}
+
+.card-tabs__body{
+  @include maq('tablet-wide') {
+    display: none;
+  }
+}
+//tabs
+.card-tabs-nav{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
+  @include mq('tablet-wide') {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__link{
+    color: $color_2;
+    cursor: pointer;
+
+    &._active{
+      color: $color_3;
+    }
+  }
+}
+
+.card-tabs-content__description,.card-spollers-item__content{
+  h2{
+    font-size: 22px;
+    padding-bottom: 15px;
+  }
+  ul{
+
+    li{
+      padding-left: 15px;
+      @if ($link-img == '') {
+        background-image: url("./../../../img/icons/point-c.svg");
+      } @else {
+        background-image: url($link-img + "/img/icons/point-c.svg");
+      }
+      background-position: left top 8px;
+      background-repeat: no-repeat;
+      padding-bottom: 10px;
+      color: $color_6;
+
+      span{
+        color: $color_2;
+      }
+    }
+  }
+}
+
+//spollers
+.card-spollers{
+  @include mq('tablet-wide') {
+    display: none;
+  }
+}
+
+.card-spollers-item{
+
+  &__title{
+    position: relative;
+    padding: 10px 30px 10px 0px;
+    cursor: pointer;
+    font-size: 22px;
+
+    &:before{
+      content: '';
+      width: 10px;
+      background-color: $color_2;
+      height: 1px;
+      transform: translate(0, -50%) rotate(-45deg);
+      position: absolute;
+      right: 15px;
+      top: 50%;
+    }
+    &:after{
+      content: '';
+      width: 10px;
+      background-color: $color_2;
+      height: 1px;
+      transform: translate(0, -50%) rotate(45deg);
+      position: absolute;
+      right: 23px;
+      top: 50%;
+    }
+    &._active{
+      color: $color_3;
+      &:before{
+        background-color: $color_3;
+        transform: translate(0, -50%) rotate(45deg);
+      }
+      &:after{
+        background-color: $color_3;
+        transform: translate(0, -50%) rotate(-45deg);
+      }
+    }
+  }
+  &__content{
+    padding-top: 20px;
+    display: none;
+  }
+}

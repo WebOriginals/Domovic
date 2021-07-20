@@ -1,0 +1,124 @@
+.card-top {
+  padding: 50px 0 25px;
+}
+
+.card-body {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr;
+  min-width: 0;
+  @include mq('tablet-wide') {
+    grid-template-columns: 500px 1fr;
+  }
+}
+.card-slider{
+  min-width: 0;
+}
+.card-slider__big-body{
+  position: relative;
+}
+
+.card-slider-big {
+
+  background-color: $color_1;
+  border-radius: 10px;
+  border: 1px solid $color_7;
+  padding: 20px 15px;
+
+
+  &__slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    @include mq('tablet-wide') {
+      height: 500px;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+}
+
+.card-slider-big-nav{
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 67px);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.card-slider-small{
+  margin-top: 30px;
+  &__slide{
+    background-color: $color_1;
+    border-radius: 10px;
+    border: 1px solid $color_7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    @include mq('tablet-wide') {
+      height: 130px;
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+
+}
+
+.card-destiption {
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 30px;
+
+  @include mq('tablet-wide') {
+    margin-top: 0;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.card-destiption__list {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  li {
+    padding-left: 15px;
+    @if ($link-img == '') {
+      background-image: url("./../../../img/icons/point-c.svg");
+    } @else {
+      background-image: url($link-img + "/img/icons/point-c.svg");
+    }
+    background-position: left top 8px;
+    background-repeat: no-repeat;
+
+    a {
+      color: $color_3;
+    }
+  }
+}
+
+.card-description-price {
+  background-color: $color_1;
+  border-radius: 10px;
+  border: 1px solid $color_7;
+  padding: 20px 15px;
+  height: fit-content;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+}

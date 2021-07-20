@@ -1,0 +1,23 @@
+section.sec-goods-main.goods-main
+    ._container
+        .goods-main__top
+            .goods-main__titl.title Популярные товары
+            .goods-main__nav(data-da=".goods-main,767,last")
+                .goods-main-btn-l.ar
+                    img(src='img/icons/arrow-l.svg' alt='стрелка на лево')
+                .goods-main-btn-n.ar
+                    img(src='img/icons/arrow-r.svg' alt='стрелка на право')
+    //тут data-category не нужны
+    .goods-main-slider._swiper(data-da=".goods-main ._container,767,2")
+        +good-main-slide('cat1','-15%', '1 000 000p.', '999 999p.', '')
+        +good-main-slide('cat2','New', '10 000p.', '9 000p.', '')
+        +good-main-slide('cat3','Хит', '100 000p.', '90 000p.', '')
+        +good-main-slide('cat4','-15%', '1 000 000p.', '999 999p.','' )
+        +good-main-slide('cat5','New', '1 000 000p.', '90 000p.', '')
+        +good-main-slide('cat6','Хит', '1 000 000p.', '9 000p.', '')
+        +good-main-slide('cat1','-15%', '1 000 000p.', '999 999p.', '')
+        +good-main-slide('cat2','New', '10 000p.', '9 000p.', '')
+        +good-main-slide('cat3','Хит', '100 000p.', '90 000p.', '')
+        +good-main-slide('cat4','-15%', '1 000 000p.', '999 999p.', '')
+        +good-main-slide('cat5','New', '1 000 000p.', '90 000p.', '')
+        +good-main-slide('cat6','Хит', '1 000 000p.', '9 000p.', '')

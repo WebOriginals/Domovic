@@ -86,8 +86,9 @@
     width: fit-content;
     font-weight: 700;
     font-size: 22px;
+  }
+  &__designer-price-margin{
     margin: 20px 0 10px;
-
   }
   &__price-old{
     text-decoration: line-through;
@@ -98,9 +99,13 @@
     font-weight: 700;
     font-size: 22px;
     color: $color_3;
+
+  }
+  &__price-new-margin{
     margin-bottom: 20px;
     @include maq('tablet') {
       margin-bottom: 15px;
     }
   }
+
 }
