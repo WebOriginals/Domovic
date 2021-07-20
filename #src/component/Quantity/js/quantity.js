@@ -1,11 +1,12 @@
-if( $( '.card-info__quantity' ).length > 0) {
-    function countFunc(count) {
-        var btnPlus = count.querySelector('.card-info__plus');
-        var btnMinus = count.querySelector('.card-info__minus');
-        var field = count.querySelector('.card-info__number');
-        var fieldValue = parseFloat(field.value, 10);//Прообразовываем к числу
 
+    function countFunc(count) {
+        let btnPlus = count.querySelector('.card-info__plus');
+        let btnMinus = count.querySelector('.card-info__minus');
+        let field = count.querySelector('.card-info__number');
+        let fieldValue = parseFloat(field.value, 10);//Прообразовываем к числу
+        let max = field.getAttribute("data-max")
         btnMinus.addEventListener('click', function () {
+
             if (fieldValue > 1) {
                 fieldValue--;
                 field.value = fieldValue;
@@ -14,12 +15,26 @@ if( $( '.card-info__quantity' ).length > 0) {
             }
         });
         btnPlus.addEventListener('click', function () {
-            fieldValue++;
-            field.value = fieldValue;
+
+            if(fieldValue < max){
+                fieldValue++;
+                field.value = fieldValue;
+                console.log(field.value);
+            }
+        });
+
+        field.addEventListener('keydown', function () {
+
+            fieldValue = this.value || 0;
+            if(fieldValue > max){
+                this.value = max;
+                console.log(this.value);
+            }else if(fieldValue == 0){
+                this.value = 1;
+            }
         });
 
     }
 
-    var counts = document.querySelectorAll('.card-info__quantity');
+    let counts = document.querySelectorAll('.card-info__quantity');
     counts.forEach(countFunc);
-}

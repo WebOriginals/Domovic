@@ -1,7 +1,7 @@
 include pug/mixins
 doctype html
 html(lang="ru")
-    +head('Каталог')
+    +head('Корзина')
 
     body
         //на всех кроме главной надо добавить класс .other-pages для .wrapper , тк шапка другая
@@ -9,10 +9,9 @@ html(lang="ru")
             include pug/_basic/header-lk-2
             .page.page-lk
                 include pug/bread-crumbs
-                +headline('Газовая варочная поверхность MBH 631 WEE')
-                include pug/card-good/card-good-top
-                include pug/card-good/card-good-bottom
-                include pug/popular-products
+                +headline('Корзина')
+                include pug/basket/basket
+
 
 
             include pug/_basic/_footer

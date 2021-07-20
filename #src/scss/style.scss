@@ -36,6 +36,7 @@ $fontFamily: 'Montserrat', sans-serif;
 @import "../component/Modals/scss/modals.scss";
 @import "../component/lazyLoad/scss/lazyLoad.scss";
 @import "../component/Tabs/scss/tabs.scss";
+@import "../component/Quantity/scss/quantity.scss";
 
 
 @import "_basice/popup";
@@ -64,4 +65,9 @@ $fontFamily: 'Montserrat', sans-serif;
 @import "card-good/card-top";
 @import "card-good/card-bottom";
 
+//basket
+@import "basket/basket";
+
+//score
+@import "score/score";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

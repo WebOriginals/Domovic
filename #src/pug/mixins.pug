@@ -68,11 +68,12 @@ mixin good-main-slide(img,tst, old, newprice, filter)
                 span В корзину
 
 mixin good-catalog(img,tst, old, newprice, filter)
-    a.good-catalog(href="#" data-category=`${filter}`)
+    .good-catalog( data-category=`${filter}`)
         .good-catalog__red-text= tst
-        .good-catalog__img.swiper-lazy
-            img(src=`img/${img}.png` alt='')
-        .good-catalog__name Наклонная вытяжка Macbi MGF 60 TL
+        a.good-catalog__link(href="#")
+            .good-catalog__img.swiper-lazy
+                img(src=`img/${img}.png` alt='')
+            .good-catalog__name Наклонная вытяжка Macbi MGF 60 TL
         .good-catalog__description.good-catalog-description
             .good-catalog-description__wrapper
                 .description-name Цвет:

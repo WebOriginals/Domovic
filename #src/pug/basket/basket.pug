@@ -1,0 +1,48 @@
+section.basket
+    ._container
+        .basket-top
+            .basket-top__titles
+                .basket-top__title Фото
+                .basket-top__title Артикул
+                .basket-top__title Наименнования
+                .basket-top__title Цена
+                .basket-top__title Количество
+                .basket-top__title Общая цена
+
+            .basket-top__good.basket-top-good
+                .basket-top-good__name Фото
+                .basket-top-good__img
+                    img(src='img/good1.png' alt='')
+                .basket-top-good__name Артикул
+                .basket-top-good__article 2126187
+                .basket-top-good__name Наименнования
+                .basket-top-good__title Газовая варочная поверхность MBH 631 WEE
+                .basket-top-good__name Цена
+                .basket-top-good__price 16 999 р.
+                .basket-top-good__name Количество
+                .basket-top-good__quantity
+                    .card-info__quantity
+                        .card-info__minus
+                            img(src="img/icons/minus.svg" alt="")
+                        input.card-info__number(value=1 data-max='5')
+                        .card-info__plus
+                            img(src="img/icons/plus.svg" alt="")
+                .basket-top-good__name Общая цена
+                .basket-top-good__total-price 16 999 р.
+                .basket-top-good__name
+                .basket-top-good__delete
+                    img(src="img/icons/exit.svg" alt="")
+
+
+
+        .basket-bottom
+            .basket-bottom__left
+                textarea(placeholder='Комментарий к заказу...' rows="5")
+                textarea(placeholder='Введите промокод...' rows="3")
+                .basket-bottom__promo Применить промокод
+            .basket-bottom__right
+                ul
+                    li Цена <span>16 999 р. </span>
+                    li Скидка <span>0 р. </span>
+                    li Итог <span>16 999 р. </span>
+                .basket-bottom__btn.button Купить
