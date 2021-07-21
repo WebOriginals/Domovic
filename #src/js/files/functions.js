@@ -370,7 +370,6 @@ for (let index = 0; index < popup_link.length; index++) {
 for (let index = 0; index < popups.length; index++) {
     const popup = popups[index];
     popup.addEventListener("click", function (e) {
-        console.log("модалка");
         if (!e.target.closest('.popup__body')) {
             popup_close(e.target.closest('.popup'));
         }

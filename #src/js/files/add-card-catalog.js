@@ -7,7 +7,6 @@ if(document.querySelector('.catalog-body__row')) {
                 servicesElement[i].classList.add('hide');
             }
         }
-
         showBtnServicesElement.addEventListener('click', () => {
             for (let i = 0; i < servicesElement.length; i++) {
                 servicesElement[i].classList.remove('hide')

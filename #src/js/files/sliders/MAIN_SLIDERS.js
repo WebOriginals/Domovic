@@ -1,6 +1,5 @@
 if(document.querySelector('._swiper')) {
     if(document.querySelector('.blog-body-slidr')) {
-        console.log(document.querySelector('.blog-body-slidr'));
         if (window.screen.width < 1199) {
             let blog = document.querySelector('.blog-body-slidr');
             blog.classList.add('_swiper');

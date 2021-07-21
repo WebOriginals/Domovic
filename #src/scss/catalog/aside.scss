@@ -146,6 +146,12 @@
   display: grid;
   grid-gap: 30px;
   padding-top: 30px;
+  >*{
+    margin-bottom: 30px;
+  }
+  @include maq('tablet-990') {
+    display: none;
+  }
 }
 .catalog-aside__body{
   margin-bottom: 30px;

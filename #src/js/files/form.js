@@ -550,17 +550,19 @@ if (priceSliderElement) {
 
 const checkboxAvailabilityElement = document.querySelector('#checkbox_1');
 const btnAvailabilityElement = document.querySelector('#btn-availability');
+if(checkboxAvailabilityElement){
 
-checkboxAvailabilityElement.addEventListener('change', () => {
-    if(checkboxAvailabilityElement.checked){
-        btnAvailabilityElement.style.display = "block";
-    }else{
+    checkboxAvailabilityElement.addEventListener('change', () => {
+        if (checkboxAvailabilityElement.checked) {
+            btnAvailabilityElement.style.display = "block";
+        } else {
+            btnAvailabilityElement.style.display = "none";
+        }
+    })
+
+    btnAvailabilityElement.addEventListener('click', () => {
+        checkboxAvailabilityElement.checked = false;
         btnAvailabilityElement.style.display = "none";
-    }
-})
-
-btnAvailabilityElement.addEventListener('click', () => {
-    checkboxAvailabilityElement.checked = false;
-    btnAvailabilityElement.style.display = "none";
-})
+    })
+}
 

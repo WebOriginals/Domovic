@@ -371,7 +371,6 @@ for (let index = 0; index < popup_link.length; index++) {
 for (let index = 0; index < popups.length; index++) {
     const popup = popups[index];
     popup.addEventListener("click", function (e) {
-        console.log("модалка");
         if (!e.target.closest('.popup__body')) {
             popup_close(e.target.closest('.popup'));
         }
@@ -3771,7 +3770,6 @@ tab();
 // sliders
 if(document.querySelector('._swiper')) {
     if(document.querySelector('.blog-body-slidr')) {
-        console.log(document.querySelector('.blog-body-slidr'));
         if (window.screen.width < 1199) {
             let blog = document.querySelector('.blog-body-slidr');
             blog.classList.add('_swiper');
@@ -4089,34 +4087,6 @@ if(document.querySelector('.card-slider-big')) {
 // end sliders
 
 
-
-
-// const isMobile = {
-//     Android: function () {
-//         return navigator.userAgent.match(/Android/i);
-//     },
-//     BlackBerry: function () {
-//         return navigator.userAgent.match(/BlackBerry/i);
-//     },
-//     iOS: function () {
-//         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-//     },
-//     Opera: function () {
-//         return navigator.userAgent.match(/Opera Mini/i);
-//     },
-//     Windows: function () {
-//         return navigator.userAgent.match(/IEMobile/i);
-//     },
-//     any: function () {
-//         return (
-//             isMobile.Android() ||
-//             isMobile.BlackBerry() ||
-//             isMobile.iOS() ||
-//             isMobile.Opera() ||
-//             isMobile.Windows());
-//     }
-// };
-
 if (isMobile.any()) {
     document.body.classList.add('_touch');
 
@@ -4124,7 +4094,7 @@ if (isMobile.any()) {
     let liSecondLevel = document.querySelectorAll('.menuSecondLevel__li');
     let liOneLevel = document.querySelectorAll('.menu__list > li');
     let logo = document.querySelector('.header__logo');
-    //let backArrow = document.querySelector('.back-arrow');
+
 
     if (menuArrows.length > 0) {
         for (let index = 0; index < menuArrows.length; index++) {
@@ -4132,29 +4102,8 @@ if (isMobile.any()) {
             menuArrow.addEventListener("click", function (e) {
 
                 menuArrow.parentElement.classList.toggle('_active');
-                //logo.style.display = 'none';
-                //backArrow.style.display = 'block';
-
             });
         }
-
-        // for (let el of liOneLevel) {
-        //     backArrow.addEventListener("click", function (e) {
-        //
-        //         for(let liSecondLevelEl of liSecondLevel){
-        //
-        //             if(liSecondLevelEl.classList.contains('_active')){
-        //
-        //                 liSecondLevelEl.classList.remove('_active');
-        //
-        //             } else {
-        //
-        //                 el.classList.remove('_active');
-        //
-        //             }
-        //         }
-        //     })
-        // }
     }
 
     //открытие 3 уровня
@@ -4167,11 +4116,6 @@ if (isMobile.any()) {
             });
         }
     }
-    //появление стрелки назад вместо логотипа
-    // if(this.classList.contains('_active')){
-    //
-    // }
-
 
 } else {
     document.body.classList.add('_pc');
@@ -4223,34 +4167,34 @@ const menuSecondLevel = document.querySelector('.menuSecondLevel');
 const listElements = menuSecondLevel.querySelectorAll('.menuSecondLevel__li');
 const asideListElements = document.querySelectorAll('.wrapper-catalog .menuSecondLevel__li');
 const closeThirdLevel = document.querySelectorAll('.ThirdLevel-title');
-const bodyThirdLevel = document.querySelectorAll('.as');
-console.log(asideListElements);
 
-for (let listElement of listElements) {
-    listElement.addEventListener('mouseenter', e => {
-        const headerThirdLevel = listElement.querySelector('.menuThirdLevel  .menu__sub-list-title');
-        const title = listElement.querySelector('span').cloneNode(true);
-        const svg = listElement.querySelector('svg').cloneNode(true);
-        headerThirdLevel.innerHTML= '';
-        headerThirdLevel.append(svg);
-        headerThirdLevel.append(title);
-    });
+if (listElements) {
+    for (let listElement of listElements) {
+        listElement.addEventListener('mouseenter', e => {
+            const headerThirdLevel = listElement.querySelector('.menuThirdLevel  .menu__sub-list-title');
+            const title = listElement.querySelector('span').cloneNode(true);
+            const svg = listElement.querySelector('svg').cloneNode(true);
+            headerThirdLevel.innerHTML = '';
+            headerThirdLevel.append(svg);
+            headerThirdLevel.append(title);
+        });
+    }
 }
-
-for (let listElement of asideListElements) {
-    listElement.addEventListener('mouseenter', e => {
-        const headerThirdLevel = listElement.querySelector('.menuThirdLevel  .menu__sub-list-title');
-        const title = listElement.querySelector('span').cloneNode(true);
-        const svg = listElement.querySelector('svg').cloneNode(true);
-        headerThirdLevel.innerHTML= '';
-        headerThirdLevel.append(svg);
-        headerThirdLevel.append(title);
-    });
+if (asideListElements) {
+    for (let listElement of asideListElements) {
+        listElement.addEventListener('mouseenter', e => {
+            const headerThirdLevel = listElement.querySelector('.menuThirdLevel  .menu__sub-list-title');
+            const title = listElement.querySelector('span').cloneNode(true);
+            const svg = listElement.querySelector('svg').cloneNode(true);
+            headerThirdLevel.innerHTML = '';
+            headerThirdLevel.append(svg);
+            headerThirdLevel.append(title);
+        });
+    }
 }
-
 
 //расчет высоты элемета
-if(!isMobile.any()) {
+if (!isMobile.any()) {
     const heightMenuSecondLevel = document.querySelector('.menu__sub-list').offsetHeight;
     for (let listElement of listElements) {
         const heightMenuThirdLevel = listElement.querySelector('.menuThirdLevel');
@@ -4258,11 +4202,14 @@ if(!isMobile.any()) {
     }
 }
 // в мобильной версии в сайд баре скрываю 2 уровень каталога
-for( let el of closeThirdLevel)
-    el.addEventListener('click', () => {
-        let perent = el.parentNode.parentNode.parentNode;
-        perent.classList.remove('_active')
-})
+if (closeThirdLevel) {
+    for (let el of closeThirdLevel) {
+        el.addEventListener('click', () => {
+            let perent = el.parentNode.parentNode.parentNode;
+            perent.classList.remove('_active')
+        })
+    }
+}
 const header = document.querySelector('.header');
 
 window.onscroll = function () {
@@ -4399,7 +4346,6 @@ if(document.querySelector('.catalog-body__row')) {
                 servicesElement[i].classList.add('hide');
             }
         }
-
         showBtnServicesElement.addEventListener('click', () => {
             for (let i = 0; i < servicesElement.length; i++) {
                 servicesElement[i].classList.remove('hide')
@@ -4409,7 +4355,6 @@ if(document.querySelector('.catalog-body__row')) {
     }
 };
 if(document.querySelector('.goods-main__filter')) {
-    console.log(document.querySelector('.goods-main__filter'));
 
     let slides = document.querySelectorAll('.goods-main-slide');
     let buttons = document.querySelectorAll('.goods-filter-btn');
@@ -4418,7 +4363,6 @@ if(document.querySelector('.goods-main__filter')) {
     filter.addEventListener('click', function (event) {
         let target = event.target;
         let dataElement = target.dataset.name;
-        console.log(dataElement)
         if (target.classList.contains('goods-filter-btn')) {
             for (let i = 0; i < buttons.length; i++) {
                 buttons[i].classList.remove('active');
@@ -4986,19 +4930,21 @@ if (priceSliderElement) {
 
 const checkboxAvailabilityElement = document.querySelector('#checkbox_1');
 const btnAvailabilityElement = document.querySelector('#btn-availability');
+if(checkboxAvailabilityElement){
 
-checkboxAvailabilityElement.addEventListener('change', () => {
-    if(checkboxAvailabilityElement.checked){
-        btnAvailabilityElement.style.display = "block";
-    }else{
+    checkboxAvailabilityElement.addEventListener('change', () => {
+        if (checkboxAvailabilityElement.checked) {
+            btnAvailabilityElement.style.display = "block";
+        } else {
+            btnAvailabilityElement.style.display = "none";
+        }
+    })
+
+    btnAvailabilityElement.addEventListener('click', () => {
+        checkboxAvailabilityElement.checked = false;
         btnAvailabilityElement.style.display = "none";
-    }
-})
-
-btnAvailabilityElement.addEventListener('click', () => {
-    checkboxAvailabilityElement.checked = false;
-    btnAvailabilityElement.style.display = "none";
-})
+    })
+}
 
 
 
