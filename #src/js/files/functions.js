@@ -355,6 +355,7 @@ function digi_animate_value(el, start, end, duration) {
 //Popups
 let popup_link = document.querySelectorAll('._popup-link');
 let popups = document.querySelectorAll('.popup');
+
 for (let index = 0; index < popup_link.length; index++) {
     const el = popup_link[index];
     el.addEventListener('click', function (e) {
@@ -369,6 +370,7 @@ for (let index = 0; index < popup_link.length; index++) {
 for (let index = 0; index < popups.length; index++) {
     const popup = popups[index];
     popup.addEventListener("click", function (e) {
+        console.log("модалка");
         if (!e.target.closest('.popup__body')) {
             popup_close(e.target.closest('.popup'));
         }

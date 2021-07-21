@@ -1,64 +1,103 @@
-.popup#brif
+.popup.popup_popup.enter
     .popup__body
-        .popup__content.brif__content
+        .popup__content.enter-content
             a.popup__close.close-popup
-                img(src="img/icons/close.svg")
-            .popup__title Расскажите нам о вашем проекте
+                img(src="img/icons/exit.svg")
             form.modal-form
-                .type-service
-                    .type-service__title.titleform Выберите тип услуги:
-                    .type-service__inputs
-                        .type-service__el
-                            input#type-service__input__1.type-service__input(type="checkbox"  name="simple-rating" value="1")
-                            label(for="type-service__input__1").type-service__label Разработка
-                        .type-service__el
-                            input#type-service__input__2.type-service__input(type="checkbox"  name="simple-rating" value="2")
-                            label(for="type-service__input__2").type-service__label Дизайн
-                        .type-service__el
-                            input#type-service__input__3.type-service__input(type="checkbox"  name="simple-rating" value="3")
-                            label(for="type-service__input__3").type-service__label Поддержка
-                        .type-service__el
-                            input#type-service__input__4.type-service__input(type="checkbox"  name="simple-rating" value="4")
-                            label(for="type-service__input__4").type-service__label Digital-маркетинг
+                .modal-form__title Войти
+                .modal-form__register Зарегестрироваться
+                .modal-form__soc
+                    a(href="vk")
+                        img(src='img/icons/soc/vk.svg' alt='vk')
+                    a(href="vk")
+                        img(src='img/icons/soc/g+.svg' alt='g+')
+                    a(href="vk")
+                        img(src='img/icons/soc/fasebook.svg' alt='fasebook')
+                    a(href="vk")
+                        img(src='img/icons/soc/email.svg' alt='email')
+                    a(href="vk")
+                        img(src='img/icons/soc/telegr.svg' alt='telegr')
+                .modal-form__inputs
+                    input.modal-form__input(placeholder='Логин')
+                    input.modal-form__input(placeholder='Пароль')
 
-                .user-data
-                    .user-data__el
-                        span.input.input--hoshi
-                            input.input__field.input__field--hoshi(type="text")#input-1
-                            label.input__label.input__label--hoshi(for="input-1")
-                                span.input__label-content.input__label-content--hoshi Имя*
-                    .user-data__el
-                        span.input.input--hoshi
-                            input.input__field.input__field--hoshi(type="tel")#input-2
-                            label.input__label.input__label--hoshi(for="input-2")
-                                span.input__label-content.input__label-content--hoshi Телефон*
-                    .user-data__el
-                        span.input.input--hoshi
-                            input.input__field.input__field--hoshi(type="text")#input-3
-                            label.input__label.input__label--hoshi(for="input-3")
-                                span.input__label-content.input__label-content--hoshi E-mail*
-                    .user-data__el
-                        span.input.input--hoshi
-                            input.input__field.input__field--hoshi(type="text")#input-4
-                            label.input__label.input__label--hoshi(for="input-4")
-                                span.input__label-content.input__label-content--hoshi Сообщение
 
-                .budget
-                    .budget__title.titleform Ваш бюджет:
-                    .type-service__inputs
-                        .type-service__el
-                            input#budget__1.type-service__input(type="radio"  name="simple-rating" value="1")
-                            label(for="budget__1").type-service__label < 100 000 р
-                        .type-service__el
-                            input#budget__2.type-service__input(type="radio"  name="simple-rating" value="2")
-                            label(for="budget__2").type-service__label 100-300 т.р
-                        .type-service__el
-                            input#budget__3.type-service__input(type="radio"  name="simple-rating" value="3")
-                            label(for="budget__3").type-service__label 300-700 т.р
-                        .type-service__el
-                            input#budget__4.type-service__input(type="radio"  name="simple-rating" value="4")
-                            label(for="budget__4").type-service__label > 700 000 р
                 .modal-form__btn.button Отправить
+
+
+.popup.popup_popup1.basket
+    .popup__body
+        .popup__content.basket-content
+            a.popup__close.close-popup
+                img(src="img/icons/exit.svg")
+            form.modal-form
+                .modal-form__good.modal-form-good
+                    a.modal-form-good__delete(href="#")
+                        img(src="img/icons/exit.svg")
+                    .modal-form-good__img
+                        img(src='img/cat1.png' alt='')
+                    .modal-form-good__name Вытяжка Macbi
+                    .modal-form-good__prices
+                        .modal-form-good__price-for-one 19 999 р.
+                        .modal-form-good__price-all 19 999 р. x 2
+                    .modal-form-good__price-total 33 998 р.
+                .modal-form__good.modal-form-good
+                    a.modal-form-good__delete(href="#")
+                        img(src="img/icons/exit.svg")
+                    .modal-form-good__img
+                        img(src='img/cat1.png' alt='')
+                    .modal-form-good__name Вытяжка Macbi
+                    .modal-form-good__prices
+                        .modal-form-good__price-for-one 19 999 р.
+                        .modal-form-good__price-all 19 999 р. x 2
+                    .modal-form-good__price-total 33 998 р.
+                .modal-form__good.modal-form-good
+                    a.modal-form-good__delete(href="#")
+                        img(src="img/icons/exit.svg")
+                    .modal-form-good__img
+                        img(src='img/cat1.png' alt='')
+                    .modal-form-good__name Вытяжка Macbi
+                    .modal-form-good__prices
+                        .modal-form-good__price-for-one 19 999 р.
+                        .modal-form-good__price-all 19 999 р. x 2
+                    .modal-form-good__price-total 33 998 р.
+                .modal-form__good.modal-form-good
+                    a.modal-form-good__delete(href="#")
+                        img(src="img/icons/exit.svg")
+                    .modal-form-good__img
+                        img(src='img/cat1.png' alt='')
+                    .modal-form-good__name Вытяжка Macbi
+                    .modal-form-good__prices
+                        .modal-form-good__price-for-one 19 999 р.
+                        .modal-form-good__price-all 19 999 р. x 2
+                    .modal-form-good__price-total 33 998 р.
+
+                .modal-form__total 33 998 р.
+
+                .modal-form__btn.button Перейти в корзину
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
