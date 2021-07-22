@@ -218,8 +218,19 @@ if (spollers.length > 0) {
                     }
                 }
             }
-            spoller.classList.toggle('_active');
-            _slideToggle(spoller.nextElementSibling);
+
+
+            if(spoller.classList.contains('_spoller')){
+                spoller.classList.toggle('_active');
+            }else{
+                spoller.parentNode.classList.toggle('_active');
+            }
+            if(spoller.classList.contains('_spoller')){
+                _slideToggle(spoller.nextElementSibling);
+            }else{
+                _slideToggle(spoller.parentNode.nextElementSibling);
+            }
+
 
             setTimeout(function () {
                 spollersGo = true;
@@ -4356,11 +4367,12 @@ if(document.querySelector('.catalog-body__row')) {
 };
 if(document.querySelector('.goods-main__filter')) {
 
-    let slides = document.querySelectorAll('.goods-main-slide');
+    let slides = document.querySelectorAll('.good-catalog');
     let buttons = document.querySelectorAll('.goods-filter-btn');
     let filter = document.querySelector('.goods-main__filter');
 
     filter.addEventListener('click', function (event) {
+        console.log(buttons);
         let target = event.target;
         let dataElement = target.dataset.name;
         if (target.classList.contains('goods-filter-btn')) {
@@ -4370,6 +4382,7 @@ if(document.querySelector('.goods-main__filter')) {
             target.classList.add('active');
         }
         for (let slide of slides) {
+            console.log(slide);
             if (slide.dataset.category !== dataElement && dataElement !== 'all') {
                 slide.classList.add('hide')
             } else {
@@ -4928,23 +4941,7 @@ if (priceSliderElement) {
     }
 }
 
-const checkboxAvailabilityElement = document.querySelector('#checkbox_1');
-const btnAvailabilityElement = document.querySelector('#btn-availability');
-if(checkboxAvailabilityElement){
 
-    checkboxAvailabilityElement.addEventListener('change', () => {
-        if (checkboxAvailabilityElement.checked) {
-            btnAvailabilityElement.style.display = "block";
-        } else {
-            btnAvailabilityElement.style.display = "none";
-        }
-    })
-
-    btnAvailabilityElement.addEventListener('click', () => {
-        checkboxAvailabilityElement.checked = false;
-        btnAvailabilityElement.style.display = "none";
-    })
-}
 
 
 

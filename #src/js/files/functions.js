@@ -217,8 +217,19 @@ if (spollers.length > 0) {
                     }
                 }
             }
-            spoller.classList.toggle('_active');
-            _slideToggle(spoller.nextElementSibling);
+
+
+            if(spoller.classList.contains('_spoller')){
+                spoller.classList.toggle('_active');
+            }else{
+                spoller.parentNode.classList.toggle('_active');
+            }
+            if(spoller.classList.contains('_spoller')){
+                _slideToggle(spoller.nextElementSibling);
+            }else{
+                _slideToggle(spoller.parentNode.nextElementSibling);
+            }
+
 
             setTimeout(function () {
                 spollersGo = true;

@@ -8,5 +8,6 @@
   @include mq('tablet-wide') {
     grid-template-columns: 280px 1fr;
     grid-gap: 30px;
+
   }
 }
