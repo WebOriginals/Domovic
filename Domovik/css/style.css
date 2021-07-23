@@ -64,6 +64,11 @@ body._lock {
   border-radius: 10px;
 }
 
+.button:hover {
+  background-color: #FFFFFF;
+  color: #DF0303;
+}
+
 .button-in-basket {
   background: #DF0303;
   color: #FFFFFF;
@@ -93,6 +98,15 @@ body._lock {
 
 .button-in-basket svg {
   margin-right: 10px;
+}
+
+.button-in-basket:hover {
+  background-color: #FFFFFF;
+  color: #DF0303;
+}
+
+.button-in-basket:hover path {
+  fill: #DF0303;
 }
 
 .blog-button {
@@ -280,8 +294,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   font-size: 14px;
-  height: 30px;
-  padding: 0px 15px;
+  height: 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -292,6 +305,7 @@ h6 {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  color: #8D8D8D;
 }
 
 .select__value span {
@@ -323,13 +337,13 @@ h6 {
   color: #000;
   display: none;
   position: absolute;
-  top: 29px;
+  top: 47px;
   border-radius: 0 0 4px 4px;
   min-width: 100%;
   left: 0;
   background-color: #fff;
   border-top: 0;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #8D8D8D;
   border-top: 0;
   font-size: 14px;
   padding: 10px 0px 5px 0px;
@@ -1644,11 +1658,13 @@ body.lock {
   display: grid;
 }
 
-.modal-form__input {
+.modal-form__input,
+.modal-form .select__title {
   padding: 18px 30px;
   border-radius: 10px;
   border: 1px solid #8D8D8D;
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .modal-form__btn {
@@ -1734,6 +1750,22 @@ body.lock {
 .modal-form-good__price-total {
   font-weight: 700;
   text-align: right;
+}
+
+.size {
+  font-size: 16px !important;
+}
+
+.modal-form__title-mb {
+  margin-bottom: 20px;
+}
+
+.modal-form__btn-mt {
+  margin-top: 20px;
+}
+
+.select__options {
+  top: 47px;
 }
 
 .other-pages .header {

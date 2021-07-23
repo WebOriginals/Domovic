@@ -99,7 +99,8 @@ body {
   border-radius: 10px;
 
   &:hover {
-
+    background-color: $color_1;
+    color: $color_3;
   }
 }
 .button-in-basket{
@@ -119,6 +120,14 @@ body {
   border-radius: 10px;
   svg{
     margin-right: 10px;
+
+  }
+  &:hover {
+    background-color: $color_1;
+    color: $color_3;
+    path{
+      fill: $color_3;
+    }
   }
 }
 

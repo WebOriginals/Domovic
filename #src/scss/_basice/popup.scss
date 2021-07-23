@@ -120,18 +120,19 @@
   }
   &__inputs{
     display: grid;
+
   }
-  &__input{
+  &__input,.select__title{
     padding: 18px 30px;
     border-radius: 10px;
     border: 1px solid $color_6;
     margin-bottom: 20px;
+    font-size: 14px;
   }
   &__btn{
     width: 100%;
   }
 }
-
 .enter-content{
   max-width: 315px !important;
   border-radius: 10px;
@@ -214,8 +215,23 @@
   }
 }
 
+.size{
+  font-size: 16px !important;
+}
+.modal-form__title-mb{
+  margin-bottom: 20px;
+}
 
+.modal-form__btn-mt{
+  margin-top: 20px;
+}
 
+.select_modal-form__input{
+
+}
+.select__options{
+  top: 47px;
+}
 
 
 

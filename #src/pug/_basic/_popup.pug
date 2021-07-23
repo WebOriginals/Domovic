@@ -77,7 +77,26 @@
                 .modal-form__btn.button Перейти в корзину
 
 
+.popup.popup_popup2.enter
+    .popup__body
+        .popup__content.basket-content
+            a.popup__close.close-popup
+                img(src="img/icons/exit.svg")
+            form.modal-form
+                .modal-form__title.size.modal-form__title-mb Зарегестрироваться
+                .modal-form__inputs
+                    input.modal-form__input(placeholder='Email')
+                    input.modal-form__input(placeholder='Имя')
+                    input.modal-form__input(placeholder='Фамилия')
+                    input.modal-form__input(placeholder='Телефон')
+                    input.modal-form__input(placeholder='Город')
+                    select.modal-form__input
+                        option(value='ИП' selected='selected') ИП
+                        option(value='ООО') ООО
+                        option(value='Физическое лицо') Физическое лицо
+                    input.modal-form__input(placeholder='Название фирмы')
 
+                .modal-form__btn.size.modal-form__btn-mt.button Зарегестрироваться
 
 
 
