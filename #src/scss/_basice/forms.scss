@@ -158,7 +158,7 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text:before {
-			background: #fff url("../../img/icons/check-box.svg") center no-repeat;
+			background: #fff url("../img/icons/check-box.svg") center no-repeat;
 		}
 	}
 	// .checkbox__text
