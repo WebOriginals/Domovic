@@ -36,9 +36,14 @@
     padding-bottom: 15px;
   }
   ul{
+    @include mq('tablet-wide') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
     li{
       padding-left: 15px;
+
       @if ($link-img == '') {
         background-image: url("./../../../img/icons/point-c.svg");
       } @else {

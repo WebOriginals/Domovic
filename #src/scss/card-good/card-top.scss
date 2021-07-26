@@ -95,9 +95,16 @@
   display: grid;
   grid-gap: 30px;
 
+
+  &__text{
+    @include mq('tablet-wide') {
+     grid-column: span 2;
+    }
+  }
   @include mq('tablet-wide') {
     margin-top: 0;
     grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
   }
 }
 

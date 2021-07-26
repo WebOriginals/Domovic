@@ -73,7 +73,7 @@ function browserSync(done) {
 function html() {
 	return src(path.src.html, {})
 		.pipe(pug({
-			pretty:true
+			pretty: true,
 		}))
 		.pipe(plumber())
 		.pipe(fileinclude())

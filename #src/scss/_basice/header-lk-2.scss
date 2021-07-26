@@ -29,6 +29,12 @@
 
 .body-header-lk-2 {
   grid-template-columns: 1fr auto auto auto;
+
+  .header__menu{
+    @include mq('tablet-wide') {
+      grid-column: span 2;
+    }
+  }
   @include mq('tablet-990') {
     grid-template-columns: 70px auto  30px 25px;
     grid-gap: 15px;
@@ -39,7 +45,7 @@
     padding: 25px 0;
   }
   @include mq('desktop') {
-    grid-template-columns: 1fr auto auto 30px 25px;
+    grid-template-columns: auto auto auto 30px 25px;
     height: 140px;
     padding: 25px 0;
   }
@@ -77,3 +83,4 @@
     }
   }
 }
+
