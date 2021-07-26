@@ -324,6 +324,7 @@ h6 {
   transition: all 0.3s ease 0s;
   width: 11px;
   height: 7px;
+  background: url("../img/icons/ar-d.svg") center/100% no-repeat;
 }
 
 .select__input {
@@ -402,7 +403,7 @@ textarea.input {
 }
 
 .checkbox__input:checked + .checkbox__text:before {
-  background: #fff url("../../img/icons/check-box.svg") center no-repeat;
+  background: #fff url("../img/icons/check-box.svg") center no-repeat;
 }
 
 .checkbox__text {

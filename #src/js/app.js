@@ -4,7 +4,6 @@
 //component
 @@include('../component/noUiSlider/js/nouislider.js')
 @@include('../component/noUiSlider/js/wNumb.min.js')
-@@include('../component/Quantity/js/quantity.js')
 @@include('../component/Modals/js/modal.js')
 @@include('../component/dinamicAdaptiv/js/dinamicAdaptiv.js')
 @@include('../component/lazyLoad/js/lazyLoad.js')
