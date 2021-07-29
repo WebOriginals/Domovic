@@ -3932,6 +3932,7 @@ if(document.querySelector('.brand-body__sleder')) {
         slidesPerView: 1,
         spaceBetween: 0,
         speed: 800,
+
         navigation: {
             nextEl: '.brand-body-btn-n',
             prevEl: '.brand-body-btn-l',
@@ -3952,6 +3953,7 @@ if(document.querySelector('.brand-body__sleder')) {
             1268: {
                 slidesPerView: 5,
                 spaceBetween: 30,
+                watchOverflow: true,
             },
         },
 

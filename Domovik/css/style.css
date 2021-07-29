@@ -1767,6 +1767,40 @@ body.lock {
   top: 47px;
 }
 
+.modal-text {
+  text-align: center;
+}
+
+.modal-text p {
+  margin-top: 15px;
+}
+
+.modal-text a {
+  color: #DF0303;
+  font-weight: 600;
+}
+
+.custom-body {
+  min-height: -webkit-fit-content !important;
+  min-height: -moz-fit-content !important;
+  min-height: fit-content !important;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+.popup-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .other-pages .header {
   background-image: url("..//img/header.png");
   background-position: center;
