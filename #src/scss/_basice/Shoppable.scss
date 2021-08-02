@@ -22,6 +22,9 @@ img {
   left: 0;
   overflow: hidden;
   z-index: 9;
+  @include maq('tablet') {
+    display: none;
+  }
 
   .hint {
     position: absolute;
@@ -29,8 +32,7 @@ img {
     width: 0;
     height: 0;
     z-index: 10;
-
-
+    cursor: pointer;
 
     &__link {
       display: block;
@@ -48,7 +50,7 @@ img {
       grid-gap: 10px;
       color: $color_2;
       visibility: hidden;
-
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
       opacity: 0;
       transform: translateX(-50%);
       border-radius: 5px;

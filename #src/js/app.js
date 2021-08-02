@@ -1,4 +1,4 @@
-
+@@include('files/Shoppable.js')
 @@include('files/functions.js')
 
 //component
@@ -27,5 +27,6 @@
 @@include('files/add-card-catalog.js')
 @@include('files/page-main-goods-filter.js')
 @@include('files/form.js')
-@@include('files/Shoppable.js')
+@@include('files/openHints.js')
+
 
