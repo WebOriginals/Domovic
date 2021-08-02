@@ -27,5 +27,5 @@
 @@include('files/add-card-catalog.js')
 @@include('files/page-main-goods-filter.js')
 @@include('files/form.js')
-
+@@include('files/Shoppable.js')
 
